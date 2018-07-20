@@ -1,0 +1,25 @@
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/style.css" />
+</head>
+@model DojoSecret.Models.LoginUser
+
+<h1>Login</h1>
+
+<table>
+<form class="form" asp-action="LoginUser" asp-controller="User" method="post">
+    <tr>
+        <td><label asp-for="LogEmail">Email:</label></td>
+        <td><input asp-for="LogEmail" type="text" name="LogEmail"></td>
+        <td><span asp-validation-for="LogEmail"></span></td>
+    </tr>
+    <tr>
+        <td><label asp-for="LogPassword">Password:</label></td>
+        <td><input asp-for="LogPassword" type="password" name="LogPassword"></td>
+        <td><span asp-validation-for="LogPassword"></span></td>
+    </tr>
+    <tr>
+        <td><button class="btn btn-success">Login</button></td>
+    </tr>
+</form>
+</table>

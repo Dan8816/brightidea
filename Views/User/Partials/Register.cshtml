@@ -1,0 +1,41 @@
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/style.css" />
+</head>
+@model DojoSecret.Models.RegisterUser
+
+<h1>Registration</h1>
+
+<table>
+    <form class="form" asp-action="RegisterUser" asp-controller="User" method="post">
+        <tr>
+            <td><label asp-for="Name">First Name:</label></td>
+            <td><input asp-for="Name" type="text" name="Name"></td>
+            <td><span asp-validation-for="Name"></span></td>
+        </tr>
+        <tr>
+            
+            <td><label asp-for="Alias">Alias:</label></td>
+            <td><input asp-for="Alias" type="text" name="Alias"></td>
+            <td><span asp-validation-for="Alias"></span></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Email">Email:</label></td>
+            <td><input asp-for="Email" type="text" name="Email"></td>
+            <td><span asp-validation-for="Email"></span></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Password">Password:</label></td>
+            <td><input asp-for="Password" type="password" name="Password"></td>
+            <td><span asp-validation-for="Password"></span></td>
+        </tr>
+        <tr>
+            <td><label asp-for="confirm">Confirm Password:</label></td>
+            <td><input asp-for="confirm" type="password" name="confirm"></td>
+            <td><span asp-validation-for="confirm"></span></td>
+        </tr>
+        <tr>
+            <td><button class="btn btn-primary">Register</button></td>
+        </tr>
+    </form>
+</table>
